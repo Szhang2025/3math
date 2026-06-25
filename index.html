@@ -124,6 +124,12 @@
         .teach-box .step strong {
             color: #b9770e;
         }
+        .highlight {
+            background: #fef2d6;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
 
         /* 例题网格 */
         .example-grid {
@@ -240,6 +246,35 @@
             text-align: center;
         }
 
+        /* 分数演示的视觉辅助（纯文字版，用颜色块模拟） */
+        .frac-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin: 8px 0 4px 0;
+            background: #f8f4ea;
+            padding: 10px 14px;
+            border-radius: 12px;
+        }
+        .frac-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: white;
+            padding: 4px 14px 4px 10px;
+            border-radius: 30px;
+            border: 1px solid #e0d5c0;
+        }
+        .frac-item .big {
+            font-size: 20px;
+            font-weight: 700;
+            color: #7d6608;
+        }
+        .frac-item .desc {
+            font-size: 13px;
+            color: #5d4e37;
+        }
+
         @media (max-width: 700px) {
             .container {
                 padding: 20px 15px;
@@ -293,7 +328,7 @@
                     <li>两、三位数乘一位数（进位）</li>
                     <li>两、三位数除以一位数（首位不够除）</li>
                     <li>千克、克的认识与换算</li>
-                    <li>分数的初步认识（比较大小、简单加减）</li>
+                    <li>分数的初步认识（比较大小、简单加减、相等判别）</li>
                     <li>“倍” 的应用</li>
                 </ul>
             </div>
@@ -325,26 +360,44 @@
     <div class="section">
         <div class="section-title">🧩 教学金钥匙 <span>讲清算理</span></div>
         <div class="teach-box">
-            <div class="key-title">💡 核心法宝：“一捆 = 10”</div>
-            <p style="margin-top: 6px; color: #5d4e37;">把抽象的竖式变成看得见、分得清的实物操作，让孩子真正理解“满十进一”和“退一作十”。</p>
+            <div class="key-title">💡 核心法宝：“一捆 = 10” + “同一块蛋糕”</div>
+            <p style="margin-top: 6px; color: #5d4e37;">把抽象的竖式变成看得见的实物，让孩子真正理解“满十进一”、“退一作十”和“分数相等”。</p>
 
+            <!-- 乘法进位 -->
             <div class="step">
-                <strong>🔹 乘法进位（如 48 × 6）—— “先分后捆”</strong><br>
-                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">准备</span> 4捆小棒（每捆10根）+ 8根散棒。<br>
-                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">算散棒</span> 8根 × 6 = 48根 → 满10根就捆成 <strong>4捆</strong>，剩 <strong>8根</strong>。<br>
-                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">算整捆</span> 4捆 × 6 = 24捆，加上新捆的4捆 = <strong>28捆</strong>（280根）。<br>
-                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">合起来</span> 28捆 + 8根 = <strong>288</strong>。竖式里的“进4”就是这4捆新捆出来的！
+                <strong>🔹 乘法进位（如 48 × 6）—— “先算整捆，再算散根，最后合起来”</strong><br>
+                48 表示 <strong>4 捆 + 8 根</strong>（每捆10根）。48×6 就是把“4捆8根”重复 6 次。<br>
+                <span class="highlight">算整捆</span> 4捆 × 6 = <strong>24 捆</strong><br>
+                <span class="highlight">算散根</span> 8根 × 6 = <strong>48 根</strong><br>
+                <span class="highlight">合起来</span> 一共是 24捆 + 48根。但48根里又满10根了，把48根中的40根捆成 <strong>4 捆</strong>，剩下 <strong>8 根</strong>。<br>
+                所以总捆数是 24捆 + 4捆 = <strong>28 捆</strong>（280根），再加上剩下的 <strong>8 根</strong>，一共 <strong>288 根</strong>。<br>
+                <span style="background: #eaf4e8; padding: 2px 10px; border-radius: 6px;">✅ 竖式里的“进4”，就是这后捆出来的 4 捆！</span>
             </div>
 
+            <!-- 除法退位 -->
             <div class="step">
-                <strong>🔹 除法退位（如 216 ÷ 4）—— “拆捆再分”</strong><br>
-                2个百（2大捆）不够4个人分，怎么办？<br>
-                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">拆百为十</span> 把2个百拆成20个十，加上原来的1个十，共 <strong>21个十</strong>。<br>
-                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">分十位</span> 21个十 ÷ 4 = 5个十（每人5捆），剩1个十（1捆）。<br>
-                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">拆十为个</span> 把剩下1捆拆开成10根，加原来的6根 = 16根，16 ÷ 4 = 4根。<br>
-                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">结果</span> 5个十 + 4个一 = <strong>54</strong>。孩子亲眼看见“不够除就拆开”，再也不怕竖式。
+                <strong>🔹 除法退位（如 216 ÷ 4）—— “看成21捆6根，先分整捆，再拆散根”</strong><br>
+                把216根小棒看成 <strong>21 捆 + 6 根</strong>（2个百拆成20个十，加1个十，就是21个十）。<br>
+                <span class="highlight">分整捆</span> 21捆平均分给4个小朋友，每人先分得 <strong>5 捆</strong>（50根），还剩 <strong>1 捆</strong>。<br>
+                <span class="highlight">拆散根</span> 把剩下的1捆拆开成10根，加上原来的6根，一共 <strong>16 根</strong>。16根 ÷ 4 = 每人 <strong>4 根</strong>。<br>
+                <span class="highlight">合起来</span> 最终每个小朋友分得 5捆（50根）+ 4根 = <strong>54 根</strong>。<br>
+                <span style="background: #eaf4e8; padding: 2px 10px; border-radius: 6px;">✅ 竖式里的“54”，就是“5捆4根”的简写！</span>
             </div>
-            <p style="margin-top: 12px; font-weight: 500; color: #7d6608;">✅ 口诀助记：<em>“满十就捆一捆，不够就拆一捆”</em></p>
+
+            <!-- 新增：分数相等判别 -->
+            <div class="step">
+                <strong>🔹 分数相等（如 1/2 = 2/4 = 3/6）—— “同一块蛋糕，切法不同”</strong><br>
+                判断分数是否相等，核心是看它们表示的 <strong>“实际大小”</strong> 是否一样。我们拿 <strong>同一个圆</strong> 来演示：<br>
+                <div class="frac-demo">
+                    <div class="frac-item"><span class="big">½</span> <span class="desc">平均分成 <strong>2</strong> 份，取 <strong>1</strong> 份（一大块）</span></div>
+                    <div class="frac-item"><span class="big">²/₄</span> <span class="desc">平均分成 <strong>4</strong> 份，取 <strong>2</strong> 份（每小块是刚才的一半，但拿两块，合起来还是一大块）</span></div>
+                    <div class="frac-item"><span class="big">³/₆</span> <span class="desc">平均分成 <strong>6</strong> 份，取 <strong>3</strong> 份（每块更小，但拿三块，合起来还是一大块）</span></div>
+                </div>
+                <span style="background: #eaf4e8; padding: 2px 10px; border-radius: 6px;">✅ 结论：<strong>1/2 = 2/4 = 3/6</strong>。秘诀：分子和分母同时乘以相同的数（×2、×3），分数大小不变！</span><br>
+                <span style="color: #7d6608; font-size: 14px; display: inline-block; margin-top: 4px;">💡 反过来看：2/4 的分子分母同时除以2，就得到 1/2；3/6 同时除以3，也得到 1/2。</span>
+            </div>
+
+            <p style="margin-top: 12px; font-weight: 500; color: #7d6608;">✅ 口诀助记：<em>“满十就捆一捆，不够就拆一捆；上下同乘或同除，分数大小不会变。”</em></p>
         </div>
     </div>
 
@@ -390,6 +443,13 @@
                 <div class="solution"><strong>解答：</strong> 2/8 + 3/8 = <strong>5/8</strong></div>
             </div>
 
+            <!-- 新增分数相等例题 -->
+            <div class="example-box">
+                <div class="tag">分数相等</div>
+                <div class="question">判断大小：1/2 ○ 2/4，1/2 ○ 3/6</div>
+                <div class="solution"><strong>解答：</strong> 分子分母同时乘以2，1/2=2/4；同时乘以3，1/2=3/6。所以 <strong>1/2 = 2/4 = 3/6</strong>。</div>
+            </div>
+
             <div class="example-box">
                 <div class="tag">测量换算</div>
                 <div class="question">一袋盐重500克，买3袋共重多少千克？</div>
@@ -433,17 +493,12 @@
             </div>
 
             <div class="example-box">
-                <div class="tag">间隔排列</div>
-                <div class="question">一条路长20米，每隔5米种一棵树，两端都种，一共种几棵？</div>
-                <div class="solution"><strong>解答：</strong> 20÷5=4个间隔，两端都种：4+1 = <strong>5棵</strong></div>
-            </div>
-
-            <div class="example-box">
                 <div class="tag">四则综合应用</div>
                 <div class="question">红花48朵，黄花是红花的3倍，红花是蓝花的4倍，紫花比红花少15朵，四种花共多少朵？</div>
                 <div class="solution"><strong>解答：</strong> 黄花=48×3=144；蓝花=48÷4=12；紫花=48−15=33；合计=48+144+12+33 = <strong>237朵</strong></div>
             </div>
         </div>
+        <p style="margin-top: 8px; font-size: 14px; color: #5f7d9a;">📌 例题总数已更新为 <strong>16道</strong>（新增分数相等判别例题）。</p>
     </div>
 
     <!-- ===== 第四部分：55题测验 ===== -->
@@ -466,6 +521,7 @@
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>允许画图</strong>：前一个月允许孩子在草稿纸上画小棒或方阵图，量感建立后自然心算。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>口述过程</strong>：做两步题时，让孩子说出“先算什么、再算什么”，说得清才是真懂。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>验算习惯</strong>：除法用乘法反着验算（如54×4=216），正确率直线上升。</li>
+            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>分数相等用“切蛋糕”</strong>：拿一张圆纸片，让孩子亲手折一折、涂一涂，亲眼看见½、²/₄、³/₆ 涂色面积完全一样，比讲一百遍公式都管用。</li>
         </ul>
     </div>
 
