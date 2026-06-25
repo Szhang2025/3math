@@ -131,6 +131,28 @@
             font-weight: 600;
         }
 
+        /* ===== 新增分数垂直样式 ===== */
+        .fr {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+            line-height: 1.2;
+            font-size: 0.85em;
+            margin: 0 3px;
+            font-weight: 600;
+        }
+        .fr .n {
+            border-bottom: 1.5px solid #1a2a3a;
+            padding: 0 4px 1px 4px;
+        }
+        .fr .d {
+            padding: 1px 4px 0 4px;
+        }
+        .fr .dash {
+            display: none; /* 用border代替，保留此处占位 */
+        }
+
         /* 例题网格（常规蓝色） */
         .example-grid {
             display: grid;
@@ -190,7 +212,7 @@
             color: #6c3483;
         }
 
-        /* 新增带括号混合运算例题（橙色边框） */
+        /* 带括号混合运算（橙色边框） */
         .example-box.bracket {
             border-left-color: #e67e22;
             background: #fef9f0;
@@ -276,7 +298,7 @@
             text-align: center;
         }
 
-        /* 分数演示 */
+        /* 分数演示（保留视觉辅助） */
         .frac-demo {
             display: flex;
             flex-wrap: wrap;
@@ -414,24 +436,24 @@
                 <span style="background: #eaf4e8; padding: 2px 10px; border-radius: 6px;">✅ 竖式里的“54”，就是“5捆4根”的简写！</span>
             </div>
 
-            <!-- 分数相等判别 -->
+            <!-- 分数相等判别（全部改为垂直分数样式） -->
             <div class="step">
-                <strong>🔹 分数相等（如 1/2 = 2/4 = 3/6）—— “同一块蛋糕，切法不同”</strong><br>
+                <strong>🔹 分数相等（如 <span class="fr"><span class="n">1</span><span class="d">2</span></span> = <span class="fr"><span class="n">2</span><span class="d">4</span></span> = <span class="fr"><span class="n">3</span><span class="d">6</span></span>）—— “同一块蛋糕，切法不同”</strong><br>
                 判断分数是否相等，核心是看它们表示的 <strong>“实际大小”</strong> 是否一样。我们拿 <strong>同一个圆</strong> 来演示：<br>
                 <div class="frac-demo">
-                    <div class="frac-item"><span class="big">½</span> <span class="desc">平均分成 <strong>2</strong> 份，取 <strong>1</strong> 份（一大块）</span></div>
-                    <div class="frac-item"><span class="big">²/₄</span> <span class="desc">平均分成 <strong>4</strong> 份，取 <strong>2</strong> 份（每小块是刚才的一半，但拿两块，合起来还是一大块）</span></div>
-                    <div class="frac-item"><span class="big">³/₆</span> <span class="desc">平均分成 <strong>6</strong> 份，取 <strong>3</strong> 份（每块更小，但拿三块，合起来还是一大块）</span></div>
+                    <div class="frac-item"><span class="big"><span class="fr"><span class="n">1</span><span class="d">2</span></span></span> <span class="desc">平均分成 <strong>2</strong> 份，取 <strong>1</strong> 份（一大块）</span></div>
+                    <div class="frac-item"><span class="big"><span class="fr"><span class="n">2</span><span class="d">4</span></span></span> <span class="desc">平均分成 <strong>4</strong> 份，取 <strong>2</strong> 份（每小块是刚才的一半，但拿两块，合起来还是一大块）</span></div>
+                    <div class="frac-item"><span class="big"><span class="fr"><span class="n">3</span><span class="d">6</span></span></span> <span class="desc">平均分成 <strong>6</strong> 份，取 <strong>3</strong> 份（每块更小，但拿三块，合起来还是一大块）</span></div>
                 </div>
-                <span style="background: #eaf4e8; padding: 2px 10px; border-radius: 6px;">✅ 结论：<strong>1/2 = 2/4 = 3/6</strong>。秘诀：分子和分母同时乘以相同的数（×2、×3），分数大小不变！</span><br>
-                <span style="color: #7d6608; font-size: 14px; display: inline-block; margin-top: 4px;">💡 反过来看：2/4 的分子分母同时除以2，就得到 1/2；3/6 同时除以3，也得到 1/2。</span>
+                <span style="background: #eaf4e8; padding: 2px 10px; border-radius: 6px;">✅ 结论：<strong><span class="fr"><span class="n">1</span><span class="d">2</span></span> = <span class="fr"><span class="n">2</span><span class="d">4</span></span> = <span class="fr"><span class="n">3</span><span class="d">6</span></span></strong>。秘诀：分子和分母同时乘以相同的数（×2、×3），分数大小不变！</span><br>
+                <span style="color: #7d6608; font-size: 14px; display: inline-block; margin-top: 4px;">💡 反过来看：<span class="fr"><span class="n">2</span><span class="d">4</span></span> 的分子分母同时除以2，就得到 <span class="fr"><span class="n">1</span><span class="d">2</span></span>；<span class="fr"><span class="n">3</span><span class="d">6</span></span> 同时除以3，也得到 <span class="fr"><span class="n">1</span><span class="d">2</span></span>。</span>
             </div>
 
             <p style="margin-top: 12px; font-weight: 500; color: #7d6608;">✅ 综合口诀：<em>“满十就捆一捆，不够就拆一捆；上下同乘或同除，分数大小不会变；加法用减验，减法用加验，乘法用除验，除法用乘验；括号里面先算清，乘除加减按顺序。”</em></p>
         </div>
     </div>
 
-    <!-- ===== 第三部分：18道例题（16道原题 + 2道带括号） ===== -->
+    <!-- ===== 第三部分：18道例题（全部分数已改为垂直样式） ===== -->
     <div class="section">
         <div class="section-title">✏️ 典型例题精讲 <span>18道全题型覆盖</span></div>
 
@@ -461,22 +483,25 @@
                 <div class="solution"><strong>解答：</strong> 6×4 = <strong>24（米）</strong></div>
             </div>
 
+            <!-- 分数比较：改为垂直样式 -->
             <div class="example-box">
                 <div class="tag">分数比较</div>
-                <div class="question">比较 1/3 和 1/5 的大小</div>
-                <div class="solution"><strong>解答：</strong> 平均分的份数越少，每份越大。→ <strong>1/3 > 1/5</strong></div>
+                <div class="question">比较 <span class="fr"><span class="n">1</span><span class="d">3</span></span> 和 <span class="fr"><span class="n">1</span><span class="d">5</span></span> 的大小</div>
+                <div class="solution"><strong>解答：</strong> 平均分的份数越少，每份越大。→ <strong><span class="fr"><span class="n">1</span><span class="d">3</span></span> > <span class="fr"><span class="n">1</span><span class="d">5</span></span></strong></div>
             </div>
 
+            <!-- 分数计算：改为垂直样式 -->
             <div class="example-box">
                 <div class="tag">分数计算</div>
-                <div class="question">一块蛋糕，小明吃了 2/8，小红吃了 3/8，两人一共吃了几分之几？</div>
-                <div class="solution"><strong>解答：</strong> 2/8 + 3/8 = <strong>5/8</strong></div>
+                <div class="question">一块蛋糕，小明吃了 <span class="fr"><span class="n">2</span><span class="d">8</span></span>，小红吃了 <span class="fr"><span class="n">3</span><span class="d">8</span></span>，两人一共吃了几分之几？</div>
+                <div class="solution"><strong>解答：</strong> <span class="fr"><span class="n">2</span><span class="d">8</span></span> + <span class="fr"><span class="n">3</span><span class="d">8</span></span> = <strong><span class="fr"><span class="n">5</span><span class="d">8</span></span></strong></div>
             </div>
 
+            <!-- 分数相等：改为垂直样式 -->
             <div class="example-box">
                 <div class="tag">分数相等</div>
-                <div class="question">判断大小：1/2 ○ 2/4，1/2 ○ 3/6</div>
-                <div class="solution"><strong>解答：</strong> 分子分母同时乘以2，1/2=2/4；同时乘以3，1/2=3/6。所以 <strong>1/2 = 2/4 = 3/6</strong>。</div>
+                <div class="question">判断大小：<span class="fr"><span class="n">1</span><span class="d">2</span></span> ○ <span class="fr"><span class="n">2</span><span class="d">4</span></span>，<span class="fr"><span class="n">1</span><span class="d">2</span></span> ○ <span class="fr"><span class="n">3</span><span class="d">6</span></span></div>
+                <div class="solution"><strong>解答：</strong> 分子分母同时乘以2，<span class="fr"><span class="n">1</span><span class="d">2</span></span>=<span class="fr"><span class="n">2</span><span class="d">4</span></span>；同时乘以3，<span class="fr"><span class="n">1</span><span class="d">2</span></span>=<span class="fr"><span class="n">3</span><span class="d">6</span></span>。所以 <strong><span class="fr"><span class="n">1</span><span class="d">2</span></span> = <span class="fr"><span class="n">2</span><span class="d">4</span></span> = <span class="fr"><span class="n">3</span><span class="d">6</span></span></strong>。</div>
             </div>
 
             <div class="example-box">
@@ -521,7 +546,7 @@
                 <div class="solution"><strong>解答：</strong> 72÷9=8；8−3 = <strong>5个</strong></div>
             </div>
 
-            <!-- 新增2道带括号混合运算例题 -->
+            <!-- 新增带括号混合运算例题 -->
             <div class="example-box bracket">
                 <div class="tag">带括号混合运算</div>
                 <div class="question">计算 (23 + 17) × 3</div>
@@ -549,7 +574,7 @@
         </div>
     </div>
 
-    <!-- ===== 第四部分：思维拓展 · 求未知数（5道保留） ===== -->
+    <!-- ===== 第四部分：思维拓展 · 求未知数（5道，其中分数题已改为垂直样式） ===== -->
     <div class="section">
         <div class="section-title">🧠 思维拓展 · 求未知数 <span>逆运算专项</span></div>
         <div class="example-grid">
@@ -577,16 +602,17 @@
                 <div class="solution"><strong>讲解：</strong> 先把 “3 × ?” 看成一个整体。<br>① 整体 = 45 − 27 = 18；② 3 × ? = 18 → ? = 18 ÷ 3 = <strong>6</strong>。<br>验证：45 − 3×6 = 45 − 18 = 27 ✔</div>
             </div>
 
+            <!-- 分数相等逆用：改为垂直样式 -->
             <div class="example-box puzzle">
                 <div class="tag">分数相等逆用</div>
-                <div class="question">5/8 = 15/?，? 等于多少？</div>
-                <div class="solution"><strong>讲解：</strong> 分数的分子从5变成15，乘了3（5×3=15）。<br>根据分数相等性质，分母也要乘3：8 × 3 = <strong>24</strong>。<br>验证：5/8 = 15/24（约分后等于5/8）✔</div>
+                <div class="question"><span class="fr"><span class="n">5</span><span class="d">8</span></span> = <span class="fr"><span class="n">15</span><span class="d">?</span></span>，? 等于多少？</div>
+                <div class="solution"><strong>讲解：</strong> 分数的分子从5变成15，乘了3（5×3=15）。<br>根据分数相等性质，分母也要乘3：8 × 3 = <strong>24</strong>。<br>验证：<span class="fr"><span class="n">5</span><span class="d">8</span></span> = <span class="fr"><span class="n">15</span><span class="d">24</span></span>（约分后等于 <span class="fr"><span class="n">5</span><span class="d">8</span></span>）✔</div>
             </div>
         </div>
         <p style="margin-top: 8px; font-size: 14px; color: #5f7d9a;">📌 核心心法：<strong>加变减、减变加、乘变除、除变乘</strong>，反向操作就能求出未知数！</p>
     </div>
 
-    <!-- ===== 第五部分：75题综合测验 ===== -->
+    <!-- ===== 第五部分：75题综合测验（内容完全不变，无分数斜线问题） ===== -->
     <div class="section">
         <div class="section-title" style="justify-content: space-between; flex-wrap: wrap;">
             <span>📝 综合测验 · 75 题</span>
@@ -606,7 +632,7 @@
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>允许画图</strong>：前一个月允许孩子在草稿纸上画小棒或方阵图，量感建立后自然心算。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>口述过程</strong>：做两步题时，让孩子说出“先算什么、再算什么”，说得清才是真懂。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>验算习惯</strong>：除法用乘法反着验算（如54×4=216），正确率直线上升。</li>
-            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>分数相等用“切蛋糕”</strong>：拿一张圆纸片，让孩子亲手折一折、涂一涂，亲眼看见½、²/₄、³/₆ 涂色面积完全一样，比讲一百遍公式都管用。</li>
+            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>分数相等用“切蛋糕”</strong>：拿一张圆纸片，让孩子亲手折一折、涂一涂，亲眼看见 <span class="fr"><span class="n">1</span><span class="d">2</span></span>、<span class="fr"><span class="n">2</span><span class="d">4</span></span>、<span class="fr"><span class="n">3</span><span class="d">6</span></span> 涂色面积完全一样，比讲一百遍公式都管用。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>求未知数练“说反话”</strong>：每天出3道“填空算式”，让孩子边说边写（如“6乘几等于42？反过来就是42除以6”），打通逆向思维。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>带括号混合运算：先画“小房子”</strong>：看到括号就先把它圈起来，告诉孩子“括号里是VIP，必须最先算”，算完后再把结果代进去继续算。</li>
         </ul>
@@ -619,7 +645,7 @@
 
 <script>
     (function() {
-        // ----- 75题完整数据（前20题：10道求未知数 + 10道混合运算；后55题为原应用题） -----
+        // ----- 75题完整数据（与原代码完全一致，未做任何改动） -----
         const quizData = [
             // ---- 第1-10题：求未知数 ----
             "6 × ? = 54，? 等于多少？",
