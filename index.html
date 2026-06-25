@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>苏教版三年级数学上册 · 完全复习包（含求未知数）</title>
+    <title>苏教版三年级数学上册 · 完全复习包（含求未知数+带括号）</title>
     <style>
         * {
             box-sizing: border-box;
@@ -190,6 +190,21 @@
             color: #6c3483;
         }
 
+        /* 新增带括号混合运算例题（橙色边框） */
+        .example-box.bracket {
+            border-left-color: #e67e22;
+            background: #fef9f0;
+        }
+        .example-box.bracket .tag {
+            background: #e67e22;
+        }
+        .example-box.bracket .solution {
+            background: #fef0dc;
+        }
+        .example-box.bracket .solution strong {
+            color: #a04000;
+        }
+
         /* 测验 */
         .quiz-grid {
             display: grid;
@@ -332,7 +347,7 @@
 <div class="container">
 
     <h1>📐 苏教版 · 三年级数学上册</h1>
-    <div class="subhead">知识图谱 + 教学金钥匙 + 21道例题 + 55题综合测验</div>
+    <div class="subhead">知识图谱 + 教学金钥匙 + 18道例题 + 75题综合测验</div>
 
     <!-- ===== 第一部分：内容概述 ===== -->
     <div class="section">
@@ -343,8 +358,8 @@
                     <li>两、三位数乘一位数（进位）</li>
                     <li>两、三位数除以一位数（首位不够除）</li>
                     <li>千克、克的认识与换算</li>
-                    <li>分数的初步认识（比较大小、简单加减、相等判别）</li>
-                    <li>“倍” 的应用 · 求未知数</li>
+                    <li>分数的初步认识（比较、加减、相等判别）</li>
+                    <li>“倍”的应用 · 求未知数 · 带括号混合运算</li>
                 </ul>
             </div>
             <div class="card"><h3>📐 图形与几何</h3>
@@ -375,8 +390,8 @@
     <div class="section">
         <div class="section-title">🧩 教学金钥匙 <span>讲清算理</span></div>
         <div class="teach-box">
-            <div class="key-title">💡 核心法宝：“一捆 = 10” + “同一块蛋糕” + “逆运算”</div>
-            <p style="margin-top: 6px; color: #5d4e37;">把抽象的竖式变成看得见的实物，让孩子真正理解“满十进一”、“退一作十”和“分数相等”，并掌握加减乘除的互逆关系。</p>
+            <div class="key-title">💡 核心法宝：“一捆 = 10” + “同一块蛋糕” + “逆运算” + “括号优先”</div>
+            <p style="margin-top: 6px; color: #5d4e37;">把抽象的竖式变成看得见的实物，让孩子真正理解“满十进一”、“退一作十”和“分数相等”，并掌握加减乘除的互逆关系及运算顺序。</p>
 
             <!-- 乘法进位 -->
             <div class="step">
@@ -412,13 +427,13 @@
                 <span style="color: #7d6608; font-size: 14px; display: inline-block; margin-top: 4px;">💡 反过来看：2/4 的分子分母同时除以2，就得到 1/2；3/6 同时除以3，也得到 1/2。</span>
             </div>
 
-            <p style="margin-top: 12px; font-weight: 500; color: #7d6608;">✅ 综合口诀：<em>“满十就捆一捆，不够就拆一捆；上下同乘或同除，分数大小不会变；加法用减验，减法用加验，乘法用除验，除法用乘验。”</em></p>
+            <p style="margin-top: 12px; font-weight: 500; color: #7d6608;">✅ 综合口诀：<em>“满十就捆一捆，不够就拆一捆；上下同乘或同除，分数大小不会变；加法用减验，减法用加验，乘法用除验，除法用乘验；括号里面先算清，乘除加减按顺序。”</em></p>
         </div>
     </div>
 
-    <!-- ===== 第三部分：16道常规例题 ===== -->
+    <!-- ===== 第三部分：18道例题（16道原题 + 2道带括号） ===== -->
     <div class="section">
-        <div class="section-title">✏️ 典型例题精讲 <span>16道全题型覆盖</span></div>
+        <div class="section-title">✏️ 典型例题精讲 <span>18道全题型覆盖</span></div>
 
         <div class="example-grid">
 
@@ -506,6 +521,19 @@
                 <div class="solution"><strong>解答：</strong> 72÷9=8；8−3 = <strong>5个</strong></div>
             </div>
 
+            <!-- 新增2道带括号混合运算例题 -->
+            <div class="example-box bracket">
+                <div class="tag">带括号混合运算</div>
+                <div class="question">计算 (23 + 17) × 3</div>
+                <div class="solution"><strong>讲解：</strong> 有括号先算括号里的。<br>① 括号内：23 + 17 = 40；② 40 × 3 = <strong>120</strong>。<br>验证：先乘后加（23+17×3=23+51=74）结果不同，所以括号必须优先！</div>
+            </div>
+
+            <div class="example-box bracket">
+                <div class="tag">带括号混合运算</div>
+                <div class="question">计算 84 ÷ (4 + 2)</div>
+                <div class="solution"><strong>讲解：</strong> 有括号先算括号里的。<br>① 括号内：4 + 2 = 6；② 84 ÷ 6 = <strong>14</strong>。<br>验证：先除后加（84÷4+2=21+2=23）结果不同，再次证明括号优先！</div>
+            </div>
+
             <div class="example-box">
                 <div class="tag">间隔排列</div>
                 <div class="question">一条路长20米，每隔5米种一棵树，两端都种，一共种几棵？</div>
@@ -517,10 +545,11 @@
                 <div class="question">红花48朵，黄花是红花的3倍，红花是蓝花的4倍，紫花比红花少15朵，四种花共多少朵？</div>
                 <div class="solution"><strong>解答：</strong> 黄花=48×3=144；蓝花=48÷4=12；紫花=48−15=33；合计=48+144+12+33 = <strong>237朵</strong></div>
             </div>
+
         </div>
     </div>
 
-    <!-- ===== 新增：第四部分 思维拓展 · 求未知数 ===== -->
+    <!-- ===== 第四部分：思维拓展 · 求未知数（5道保留） ===== -->
     <div class="section">
         <div class="section-title">🧠 思维拓展 · 求未知数 <span>逆运算专项</span></div>
         <div class="example-grid">
@@ -557,10 +586,10 @@
         <p style="margin-top: 8px; font-size: 14px; color: #5f7d9a;">📌 核心心法：<strong>加变减、减变加、乘变除、除变乘</strong>，反向操作就能求出未知数！</p>
     </div>
 
-    <!-- ===== 第五部分：55题测验 ===== -->
+    <!-- ===== 第五部分：75题综合测验 ===== -->
     <div class="section">
         <div class="section-title" style="justify-content: space-between; flex-wrap: wrap;">
-            <span>📝 综合测验 · 55 题</span>
+            <span>📝 综合测验 · 75 题</span>
             <span style="font-size: 16px; font-weight: 400; background: #e6f0fa; padding: 2px 16px; border-radius: 40px;">
                 <button class="btn-toggle" id="toggleAllBtn">🔘 显示 / 隐藏 答案</button>
             </span>
@@ -579,17 +608,42 @@
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>验算习惯</strong>：除法用乘法反着验算（如54×4=216），正确率直线上升。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>分数相等用“切蛋糕”</strong>：拿一张圆纸片，让孩子亲手折一折、涂一涂，亲眼看见½、²/₄、³/₆ 涂色面积完全一样，比讲一百遍公式都管用。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>求未知数练“说反话”</strong>：每天出3道“填空算式”，让孩子边说边写（如“6乘几等于42？反过来就是42除以6”），打通逆向思维。</li>
+            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>带括号混合运算：先画“小房子”</strong>：看到括号就先把它圈起来，告诉孩子“括号里是VIP，必须最先算”，算完后再把结果代进去继续算。</li>
         </ul>
     </div>
 
     <div class="footer">
-        📚 苏教版三年级数学上册 · 完全复习包 · 含求未知数专项 · 适合 GitHub Pages 发布
+        📚 苏教版三年级数学上册 · 完全复习包 · 含求未知数与带括号专项 · 适合 GitHub Pages 发布
     </div>
 </div>
 
 <script>
     (function() {
+        // ----- 75题完整数据（前20题：10道求未知数 + 10道混合运算；后55题为原应用题） -----
         const quizData = [
+            // ---- 第1-10题：求未知数 ----
+            "6 × ? = 54，? 等于多少？",
+            "? − 45 = 38，? 等于多少？",
+            "72 ÷ ? = 8，? 等于多少？",
+            "? + 67 = 100，? 等于多少？",
+            "9 × ? = 81，? 等于多少？",
+            "150 − ? = 76，? 等于多少？",
+            "? ÷ 5 = 13，? 等于多少？",
+            "46 + ? = 82，? 等于多少？",
+            "7 × ? = 84，? 等于多少？",
+            "? − 62 = 29，? 等于多少？",
+            // ---- 第11-20题：带括号混合运算 ----
+            "23 + 15 × 4 = ?",
+            "(45 − 18) × 3 = ?",
+            "64 ÷ 8 + 17 = ?",
+            "9 × (11 − 6) = ?",
+            "78 − 54 ÷ 6 = ?",
+            "(36 + 28) ÷ 8 = ?",
+            "56 ÷ 7 × 3 = ?",
+            "100 − (45 + 38) = ?",
+            "48 + 24 ÷ 6 = ?",
+            "(72 − 48) × 2 = ?",
+            // ---- 第21-75题：原55道应用题 ----
             "小明有236张邮票，又收集了158张，现在一共有多少张？",
             "学校图书馆有故事书423本，借出去287本，还剩多少本？",
             "每袋糖果重250克，4袋共重多少克？",
@@ -648,6 +702,11 @@
         ];
 
         const answerData = [
+            // 10道求未知数答案
+            "9", "83", "9", "33", "9", "74", "65", "36", "12", "91",
+            // 10道混合运算答案
+            "83", "81", "25", "45", "69", "8", "24", "17", "52", "48",
+            // 55道原应用题答案
             "394张", "136本", "1000克", "14个", "77页", "224厘米", "56元", "9人", "170千克", "32元",
             "36元", "20个", "45颗", "42人", "96瓶", "12袋", "45张", "165元", "30米", "12人",
             "310件", "155本", "90支", "6个", "77张", "60棵", "9束", "12元", "40厘米", "8盒，剩8个",
