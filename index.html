@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>苏教版三年级数学上册 · 完全复习包（含教学法）</title>
+    <title>苏教版三年级数学上册 · 完全复习包（含求未知数）</title>
     <style>
         * {
             box-sizing: border-box;
@@ -131,7 +131,7 @@
             font-weight: 600;
         }
 
-        /* 例题网格 */
+        /* 例题网格（常规蓝色） */
         .example-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -173,6 +173,21 @@
         }
         .example-box .solution strong {
             color: #003057;
+        }
+
+        /* 思维拓展（紫色边框） */
+        .example-box.puzzle {
+            border-left-color: #8e44ad;
+            background: #fbf5ff;
+        }
+        .example-box.puzzle .tag {
+            background: #8e44ad;
+        }
+        .example-box.puzzle .solution {
+            background: #f0e8fa;
+        }
+        .example-box.puzzle .solution strong {
+            color: #6c3483;
         }
 
         /* 测验 */
@@ -246,7 +261,7 @@
             text-align: center;
         }
 
-        /* 分数演示的视觉辅助（纯文字版，用颜色块模拟） */
+        /* 分数演示 */
         .frac-demo {
             display: flex;
             flex-wrap: wrap;
@@ -317,7 +332,7 @@
 <div class="container">
 
     <h1>📐 苏教版 · 三年级数学上册</h1>
-    <div class="subhead">知识图谱 + 15道例题精讲 + 55题综合测验 + 教学金钥匙</div>
+    <div class="subhead">知识图谱 + 教学金钥匙 + 21道例题 + 55题综合测验</div>
 
     <!-- ===== 第一部分：内容概述 ===== -->
     <div class="section">
@@ -329,7 +344,7 @@
                     <li>两、三位数除以一位数（首位不够除）</li>
                     <li>千克、克的认识与换算</li>
                     <li>分数的初步认识（比较大小、简单加减、相等判别）</li>
-                    <li>“倍” 的应用</li>
+                    <li>“倍” 的应用 · 求未知数</li>
                 </ul>
             </div>
             <div class="card"><h3>📐 图形与几何</h3>
@@ -360,8 +375,8 @@
     <div class="section">
         <div class="section-title">🧩 教学金钥匙 <span>讲清算理</span></div>
         <div class="teach-box">
-            <div class="key-title">💡 核心法宝：“一捆 = 10” + “同一块蛋糕”</div>
-            <p style="margin-top: 6px; color: #5d4e37;">把抽象的竖式变成看得见的实物，让孩子真正理解“满十进一”、“退一作十”和“分数相等”。</p>
+            <div class="key-title">💡 核心法宝：“一捆 = 10” + “同一块蛋糕” + “逆运算”</div>
+            <p style="margin-top: 6px; color: #5d4e37;">把抽象的竖式变成看得见的实物，让孩子真正理解“满十进一”、“退一作十”和“分数相等”，并掌握加减乘除的互逆关系。</p>
 
             <!-- 乘法进位 -->
             <div class="step">
@@ -384,7 +399,7 @@
                 <span style="background: #eaf4e8; padding: 2px 10px; border-radius: 6px;">✅ 竖式里的“54”，就是“5捆4根”的简写！</span>
             </div>
 
-            <!-- 新增：分数相等判别 -->
+            <!-- 分数相等判别 -->
             <div class="step">
                 <strong>🔹 分数相等（如 1/2 = 2/4 = 3/6）—— “同一块蛋糕，切法不同”</strong><br>
                 判断分数是否相等，核心是看它们表示的 <strong>“实际大小”</strong> 是否一样。我们拿 <strong>同一个圆</strong> 来演示：<br>
@@ -397,13 +412,13 @@
                 <span style="color: #7d6608; font-size: 14px; display: inline-block; margin-top: 4px;">💡 反过来看：2/4 的分子分母同时除以2，就得到 1/2；3/6 同时除以3，也得到 1/2。</span>
             </div>
 
-            <p style="margin-top: 12px; font-weight: 500; color: #7d6608;">✅ 口诀助记：<em>“满十就捆一捆，不够就拆一捆；上下同乘或同除，分数大小不会变。”</em></p>
+            <p style="margin-top: 12px; font-weight: 500; color: #7d6608;">✅ 综合口诀：<em>“满十就捆一捆，不够就拆一捆；上下同乘或同除，分数大小不会变；加法用减验，减法用加验，乘法用除验，除法用乘验。”</em></p>
         </div>
     </div>
 
-    <!-- ===== 第三部分：15道例题 ===== -->
+    <!-- ===== 第三部分：16道常规例题 ===== -->
     <div class="section">
-        <div class="section-title">✏️ 典型例题精讲 <span>15道全题型覆盖</span></div>
+        <div class="section-title">✏️ 典型例题精讲 <span>16道全题型覆盖</span></div>
 
         <div class="example-grid">
 
@@ -443,7 +458,6 @@
                 <div class="solution"><strong>解答：</strong> 2/8 + 3/8 = <strong>5/8</strong></div>
             </div>
 
-            <!-- 新增分数相等例题 -->
             <div class="example-box">
                 <div class="tag">分数相等</div>
                 <div class="question">判断大小：1/2 ○ 2/4，1/2 ○ 3/6</div>
@@ -493,15 +507,57 @@
             </div>
 
             <div class="example-box">
+                <div class="tag">间隔排列</div>
+                <div class="question">一条路长20米，每隔5米种一棵树，两端都种，一共种几棵？</div>
+                <div class="solution"><strong>解答：</strong> 20÷5=4个间隔，两端都种：4+1 = <strong>5棵</strong></div>
+            </div>
+
+            <div class="example-box">
                 <div class="tag">四则综合应用</div>
                 <div class="question">红花48朵，黄花是红花的3倍，红花是蓝花的4倍，紫花比红花少15朵，四种花共多少朵？</div>
                 <div class="solution"><strong>解答：</strong> 黄花=48×3=144；蓝花=48÷4=12；紫花=48−15=33；合计=48+144+12+33 = <strong>237朵</strong></div>
             </div>
         </div>
-        <p style="margin-top: 8px; font-size: 14px; color: #5f7d9a;">📌 例题总数已更新为 <strong>16道</strong>（新增分数相等判别例题）。</p>
     </div>
 
-    <!-- ===== 第四部分：55题测验 ===== -->
+    <!-- ===== 新增：第四部分 思维拓展 · 求未知数 ===== -->
+    <div class="section">
+        <div class="section-title">🧠 思维拓展 · 求未知数 <span>逆运算专项</span></div>
+        <div class="example-grid">
+            <div class="example-box puzzle">
+                <div class="tag">乘法逆运算</div>
+                <div class="question">6 × ? = 42，? 等于多少？</div>
+                <div class="solution"><strong>讲解：</strong> 乘法算式里，求一个因数 = 积 ÷ 另一个因数。<br>? = 42 ÷ 6 = <strong>7</strong>。验证：6 × 7 = 42 ✔</div>
+            </div>
+
+            <div class="example-box puzzle">
+                <div class="tag">减法逆运算</div>
+                <div class="question">117 − ? = 23，? 等于多少？</div>
+                <div class="solution"><strong>讲解：</strong> 减法算式里，求减数 = 被减数 − 差。<br>? = 117 − 23 = <strong>94</strong>。验证：117 − 94 = 23 ✔</div>
+            </div>
+
+            <div class="example-box puzzle">
+                <div class="tag">除法逆运算</div>
+                <div class="question">? ÷ 7 = 12，? 等于多少？</div>
+                <div class="solution"><strong>讲解：</strong> 除法算式里，求被除数 = 商 × 除数。<br>? = 12 × 7 = <strong>84</strong>。验证：84 ÷ 7 = 12 ✔</div>
+            </div>
+
+            <div class="example-box puzzle">
+                <div class="tag">两步混合逆运算</div>
+                <div class="question">45 − 3 × ? = 27，? 等于多少？</div>
+                <div class="solution"><strong>讲解：</strong> 先把 “3 × ?” 看成一个整体。<br>① 整体 = 45 − 27 = 18；② 3 × ? = 18 → ? = 18 ÷ 3 = <strong>6</strong>。<br>验证：45 − 3×6 = 45 − 18 = 27 ✔</div>
+            </div>
+
+            <div class="example-box puzzle">
+                <div class="tag">分数相等逆用</div>
+                <div class="question">5/8 = 15/?，? 等于多少？</div>
+                <div class="solution"><strong>讲解：</strong> 分数的分子从5变成15，乘了3（5×3=15）。<br>根据分数相等性质，分母也要乘3：8 × 3 = <strong>24</strong>。<br>验证：5/8 = 15/24（约分后等于5/8）✔</div>
+            </div>
+        </div>
+        <p style="margin-top: 8px; font-size: 14px; color: #5f7d9a;">📌 核心心法：<strong>加变减、减变加、乘变除、除变乘</strong>，反向操作就能求出未知数！</p>
+    </div>
+
+    <!-- ===== 第五部分：55题测验 ===== -->
     <div class="section">
         <div class="section-title" style="justify-content: space-between; flex-wrap: wrap;">
             <span>📝 综合测验 · 55 题</span>
@@ -513,7 +569,7 @@
         <p style="margin-top: 16px; font-size: 14px; color: #5f7d9a;">👆 点击题后的绿色标签可单独查看答案，点上方按钮批量切换。</p>
     </div>
 
-    <!-- ===== 第五部分：家长辅导建议 ===== -->
+    <!-- ===== 第六部分：家长辅导建议 ===== -->
     <div class="section" style="background: #f4f9ff; border-radius: 24px; padding: 20px 25px;">
         <div class="section-title" style="border-bottom-color: #b8d2e8;">👪 给家长的辅导建议</div>
         <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
@@ -522,11 +578,12 @@
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>口述过程</strong>：做两步题时，让孩子说出“先算什么、再算什么”，说得清才是真懂。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>验算习惯</strong>：除法用乘法反着验算（如54×4=216），正确率直线上升。</li>
             <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>分数相等用“切蛋糕”</strong>：拿一张圆纸片，让孩子亲手折一折、涂一涂，亲眼看见½、²/₄、³/₆ 涂色面积完全一样，比讲一百遍公式都管用。</li>
+            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>求未知数练“说反话”</strong>：每天出3道“填空算式”，让孩子边说边写（如“6乘几等于42？反过来就是42除以6”），打通逆向思维。</li>
         </ul>
     </div>
 
     <div class="footer">
-        📚 苏教版三年级数学上册 · 完全复习包 · 适合 GitHub Pages 发布
+        📚 苏教版三年级数学上册 · 完全复习包 · 含求未知数专项 · 适合 GitHub Pages 发布
     </div>
 </div>
 
