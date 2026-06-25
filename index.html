@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>苏教版三年级数学上册 · 综合复习（含四则混合应用题）</title>
+    <title>苏教版三年级数学上册 · 完全复习包（含教学法）</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,7 +12,7 @@
         }
 
         body {
-            background: #f5f9fe;
+            background: #f0f6fc;
             font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
             padding: 30px 20px;
             color: #1a2a3a;
@@ -20,10 +20,10 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 28px;
+            border-radius: 32px;
             box-shadow: 0 20px 60px rgba(0, 20, 40, 0.08);
             padding: 40px 45px;
         }
@@ -34,9 +34,8 @@
             color: #0b2b4a;
             border-left: 6px solid #3b8cbf;
             padding-left: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
-
         .subhead {
             color: #4e6b85;
             font-size: 16px;
@@ -59,22 +58,24 @@
             align-items: center;
             gap: 10px;
             flex-wrap: wrap;
+            border-bottom: 3px solid #dce9f5;
+            padding-bottom: 8px;
         }
         .section-title span {
             background: #dce9f5;
-            padding: 0 14px;
+            padding: 0 16px;
             border-radius: 30px;
             font-size: 14px;
             color: #1a4970;
         }
 
+        /* 卡片网格 */
         .card-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-top: 10px;
         }
-
         .card {
             background: #f8fafc;
             border-radius: 18px;
@@ -100,14 +101,37 @@
             margin-bottom: 4px;
         }
 
-        /* 例题网格 - 两列 */
+        /* 教学金钥匙 */
+        .teach-box {
+            background: #fef9e7;
+            border-radius: 20px;
+            padding: 22px 28px;
+            border: 2px solid #f1c40f;
+            margin-top: 6px;
+        }
+        .teach-box .key-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #7d6608;
+        }
+        .teach-box .step {
+            background: white;
+            padding: 12px 18px;
+            border-radius: 14px;
+            margin-top: 12px;
+            border-left: 6px solid #f39c12;
+        }
+        .teach-box .step strong {
+            color: #b9770e;
+        }
+
+        /* 例题网格 */
         .example-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 18px;
             margin-top: 6px;
         }
-
         .example-box {
             background: #f1f7fc;
             border-radius: 18px;
@@ -174,10 +198,10 @@
             border-radius: 20px;
             margin-left: 6px;
             cursor: pointer;
-            transition: 0.2s;
             user-select: none;
             white-space: nowrap;
             font-size: 14px;
+            transition: 0.2s;
         }
         .quiz-item .ans:hover {
             background: #c5e0cf;
@@ -206,9 +230,6 @@
         .btn-toggle:hover {
             background: #c9ddec;
         }
-        .btn-toggle:active {
-            transform: scale(0.96);
-        }
 
         .footer {
             margin-top: 40px;
@@ -223,12 +244,8 @@
             .container {
                 padding: 20px 15px;
             }
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-            .example-grid {
-                grid-template-columns: 1fr;
-            }
+            .card-grid,
+            .example-grid,
             .quiz-grid {
                 grid-template-columns: 1fr;
             }
@@ -265,18 +282,18 @@
 <div class="container">
 
     <h1>📐 苏教版 · 三年级数学上册</h1>
-    <div class="subhead">知识点 · 例题（15道） · 综合测验（55题）</div>
+    <div class="subhead">知识图谱 + 15道例题精讲 + 55题综合测验 + 教学金钥匙</div>
 
-    <!-- ====== 第一部分：内容概述 ====== -->
+    <!-- ===== 第一部分：内容概述 ===== -->
     <div class="section">
-        <div class="section-title">📖 核心内容 <span>四大板块</span></div>
+        <div class="section-title">📖 核心知识图谱 <span>四大板块</span></div>
         <div class="card-grid">
             <div class="card"><h3>🧮 数与代数</h3>
                 <ul>
                     <li>两、三位数乘一位数（进位）</li>
-                    <li>两、三位数除以一位数</li>
+                    <li>两、三位数除以一位数（首位不够除）</li>
                     <li>千克、克的认识与换算</li>
-                    <li>分数的初步认识（比较大小）</li>
+                    <li>分数的初步认识（比较大小、简单加减）</li>
                     <li>“倍” 的应用</li>
                 </ul>
             </div>
@@ -289,8 +306,8 @@
             </div>
             <div class="card"><h3>🧩 解决问题策略</h3>
                 <ul>
-                    <li>从条件出发分析问题</li>
-                    <li>两步混合运算（无括号）</li>
+                    <li>从条件出发分析问题（两步运算）</li>
+                    <li>混合运算（乘加、乘减、除加、除减）</li>
                     <li>实际情境中的数量关系</li>
                 </ul>
             </div>
@@ -304,145 +321,162 @@
         </div>
     </div>
 
-    <!-- ====== 第二部分：典型例题（15道） ====== -->
+    <!-- ===== 第二部分：教学金钥匙 ===== -->
     <div class="section">
-        <div class="section-title">✏️ 典型例题 <span>15道 · 覆盖全题型</span></div>
+        <div class="section-title">🧩 教学金钥匙 <span>讲清算理</span></div>
+        <div class="teach-box">
+            <div class="key-title">💡 核心法宝：“一捆 = 10”</div>
+            <p style="margin-top: 6px; color: #5d4e37;">把抽象的竖式变成看得见、分得清的实物操作，让孩子真正理解“满十进一”和“退一作十”。</p>
+
+            <div class="step">
+                <strong>🔹 乘法进位（如 48 × 6）—— “先分后捆”</strong><br>
+                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">准备</span> 4捆小棒（每捆10根）+ 8根散棒。<br>
+                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">算散棒</span> 8根 × 6 = 48根 → 满10根就捆成 <strong>4捆</strong>，剩 <strong>8根</strong>。<br>
+                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">算整捆</span> 4捆 × 6 = 24捆，加上新捆的4捆 = <strong>28捆</strong>（280根）。<br>
+                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">合起来</span> 28捆 + 8根 = <strong>288</strong>。竖式里的“进4”就是这4捆新捆出来的！
+            </div>
+
+            <div class="step">
+                <strong>🔹 除法退位（如 216 ÷ 4）—— “拆捆再分”</strong><br>
+                2个百（2大捆）不够4个人分，怎么办？<br>
+                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">拆百为十</span> 把2个百拆成20个十，加上原来的1个十，共 <strong>21个十</strong>。<br>
+                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">分十位</span> 21个十 ÷ 4 = 5个十（每人5捆），剩1个十（1捆）。<br>
+                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">拆十为个</span> 把剩下1捆拆开成10根，加原来的6根 = 16根，16 ÷ 4 = 4根。<br>
+                <span style="background: #fef2d6; padding: 2px 8px; border-radius: 6px;">结果</span> 5个十 + 4个一 = <strong>54</strong>。孩子亲眼看见“不够除就拆开”，再也不怕竖式。
+            </div>
+            <p style="margin-top: 12px; font-weight: 500; color: #7d6608;">✅ 口诀助记：<em>“满十就捆一捆，不够就拆一捆”</em></p>
+        </div>
+    </div>
+
+    <!-- ===== 第三部分：15道例题 ===== -->
+    <div class="section">
+        <div class="section-title">✏️ 典型例题精讲 <span>15道全题型覆盖</span></div>
 
         <div class="example-grid">
 
-            <!-- 1. 乘法进位 -->
             <div class="example-box">
                 <div class="tag">乘法进位</div>
                 <div class="question">计算 48 × 6</div>
-                <div class="solution"><strong>解答：</strong> 个位 8×6=48，写8进4；十位 4×6=24，加进位的4得28，写8进2；百位写2。→ <strong>288</strong></div>
+                <div class="solution"><strong>解答：</strong> 个位8×6=48，写8进4；十位4×6=24，加进位的4得28，写8进2；百位写2。→ <strong>288</strong></div>
             </div>
 
-            <!-- 2. 除法（首位不够除） -->
             <div class="example-box">
-                <div class="tag">除法</div>
+                <div class="tag">除法（首位不够）</div>
                 <div class="question">计算 216 ÷ 4</div>
-                <div class="solution"><strong>解答：</strong> 2÷4不够，看前两位21÷4=5余1，十位写5；余下16÷4=4，个位写4。→ <strong>54</strong></div>
+                <div class="solution"><strong>解答：</strong> 2÷4不够，看前两位21÷4=5余1，十位写5；余下16÷4=4。→ <strong>54</strong></div>
             </div>
 
-            <!-- 3. 长方形周长 -->
             <div class="example-box">
                 <div class="tag">图形周长</div>
                 <div class="question">长方形菜地长8米，宽5米，四周围篱笆，篱笆长多少米？</div>
                 <div class="solution"><strong>解答：</strong> (8+5)×2 = 26（米）。若一面靠墙，最少用 8+5×2 = 18 米。</div>
             </div>
 
-            <!-- 4. 正方形周长 -->
             <div class="example-box">
                 <div class="tag">图形周长</div>
                 <div class="question">正方形花坛边长6米，围上护栏，护栏长多少米？</div>
                 <div class="solution"><strong>解答：</strong> 6×4 = <strong>24（米）</strong></div>
             </div>
 
-            <!-- 5. 分数比较 -->
             <div class="example-box">
-                <div class="tag">分数</div>
+                <div class="tag">分数比较</div>
                 <div class="question">比较 1/3 和 1/5 的大小</div>
                 <div class="solution"><strong>解答：</strong> 平均分的份数越少，每份越大。→ <strong>1/3 > 1/5</strong></div>
             </div>
 
-            <!-- 6. 分数简单计算 -->
             <div class="example-box">
-                <div class="tag">分数</div>
-                <div class="question">一块蛋糕，小明吃了 2/8，小红吃了 3/8，两人一共吃了这块蛋糕的几分之几？</div>
+                <div class="tag">分数计算</div>
+                <div class="question">一块蛋糕，小明吃了 2/8，小红吃了 3/8，两人一共吃了几分之几？</div>
                 <div class="solution"><strong>解答：</strong> 2/8 + 3/8 = <strong>5/8</strong></div>
             </div>
 
-            <!-- 7. 千克与克换算 -->
             <div class="example-box">
-                <div class="tag">测量</div>
-                <div class="question">一袋盐重500克，买3袋盐共重多少千克？</div>
-                <div class="solution"><strong>解答：</strong> 500×3 = 1500克 = <strong>1千克500克（1.5千克）</strong></div>
+                <div class="tag">测量换算</div>
+                <div class="question">一袋盐重500克，买3袋共重多少千克？</div>
+                <div class="solution"><strong>解答：</strong> 500×3=1500克 = <strong>1千克500克（1.5千克）</strong></div>
             </div>
 
-            <!-- 8. 毫米/分米换算 -->
             <div class="example-box">
-                <div class="tag">测量</div>
+                <div class="tag">测量换算</div>
                 <div class="question">一根绳子长3分米，用去15厘米，还剩多少厘米？</div>
                 <div class="solution"><strong>解答：</strong> 3分米=30厘米，30−15 = <strong>15厘米</strong></div>
             </div>
 
-            <!-- 9. 两步策略（乘加） -->
             <div class="example-box">
-                <div class="tag">两步运算</div>
+                <div class="tag">两步运算（乘加）</div>
                 <div class="question">绿花12朵，黄花是绿花的3倍，红花比黄花少8朵。红花多少朵？</div>
-                <div class="solution"><strong>解答：</strong> ① 黄花：12×3=36朵；② 红花：36−8 = <strong>28朵</strong></div>
+                <div class="solution"><strong>解答：</strong> 黄花：12×3=36；红花：36−8 = <strong>28朵</strong></div>
             </div>
 
-            <!-- 10. 两步策略（除加） -->
             <div class="example-box">
-                <div class="tag">两步运算</div>
+                <div class="tag">两步运算（除加）</div>
                 <div class="question">小华有60元，买书包用去一半，买文具比书包少8元，买文具花了多少元？</div>
-                <div class="solution"><strong>解答：</strong> 书包：60÷2=30元；文具：30−8 = <strong>22元</strong></div>
+                <div class="solution"><strong>解答：</strong> 书包：60÷2=30；文具：30−8 = <strong>22元</strong></div>
             </div>
 
-            <!-- 11. “倍”的应用 -->
             <div class="example-box">
-                <div class="tag">倍的认识</div>
+                <div class="tag">倍的应用</div>
                 <div class="question">小明有9颗糖，小红的糖是小明的4倍，两人一共有多少颗糖？</div>
-                <div class="solution"><strong>解答：</strong> 小红：9×4=36颗；一共：9+36 = <strong>45颗</strong></div>
+                <div class="solution"><strong>解答：</strong> 小红：9×4=36；一共：9+36 = <strong>45颗</strong></div>
             </div>
 
-            <!-- 12. 混合运算（乘减） -->
             <div class="example-box">
-                <div class="tag">混合运算</div>
+                <div class="tag">混合运算（乘减）</div>
                 <div class="question">商店运来5箱牛奶，每箱24瓶，卖出68瓶，还剩多少瓶？</div>
-                <div class="solution"><strong>解答：</strong> 5×24=120瓶；120−68 = <strong>52瓶</strong></div>
+                <div class="solution"><strong>解答：</strong> 5×24=120；120−68 = <strong>52瓶</strong></div>
             </div>
 
-            <!-- 13. 混合运算（除减） -->
             <div class="example-box">
-                <div class="tag">混合运算</div>
+                <div class="tag">混合运算（除减）</div>
                 <div class="question">有72个苹果，平均分给9个小朋友，每人吃了3个，每人还剩几个？</div>
-                <div class="solution"><strong>解答：</strong> 每人分：72÷9=8个；还剩：8−3 = <strong>5个</strong></div>
+                <div class="solution"><strong>解答：</strong> 72÷9=8；8−3 = <strong>5个</strong></div>
             </div>
 
-            <!-- 14. 间隔排列（选学） -->
             <div class="example-box">
                 <div class="tag">间隔排列</div>
                 <div class="question">一条路长20米，每隔5米种一棵树，两端都种，一共种几棵？</div>
                 <div class="solution"><strong>解答：</strong> 20÷5=4个间隔，两端都种：4+1 = <strong>5棵</strong></div>
             </div>
 
-            <!-- 15. 四则综合应用 -->
             <div class="example-box">
-                <div class="tag">四则综合</div>
+                <div class="tag">四则综合应用</div>
                 <div class="question">红花48朵，黄花是红花的3倍，红花是蓝花的4倍，紫花比红花少15朵，四种花共多少朵？</div>
                 <div class="solution"><strong>解答：</strong> 黄花=48×3=144；蓝花=48÷4=12；紫花=48−15=33；合计=48+144+12+33 = <strong>237朵</strong></div>
             </div>
-
         </div>
     </div>
 
-    <!-- ====== 第三部分：测验（55题） ====== -->
+    <!-- ===== 第四部分：55题测验 ===== -->
     <div class="section">
         <div class="section-title" style="justify-content: space-between; flex-wrap: wrap;">
-            <span>📝 综合测验 · 55 题（含5道四则混合应用题）</span>
+            <span>📝 综合测验 · 55 题</span>
             <span style="font-size: 16px; font-weight: 400; background: #e6f0fa; padding: 2px 16px; border-radius: 40px;">
                 <button class="btn-toggle" id="toggleAllBtn">🔘 显示 / 隐藏 答案</button>
             </span>
         </div>
+        <div class="quiz-grid" id="quizContainer"></div>
+        <p style="margin-top: 16px; font-size: 14px; color: #5f7d9a;">👆 点击题后的绿色标签可单独查看答案，点上方按钮批量切换。</p>
+    </div>
 
-        <div class="quiz-grid" id="quizContainer">
-            <!-- 由 JS 动态生成 -->
-        </div>
-        <p style="margin-top: 16px; font-size: 14px; color: #5f7d9a;">👆 点击每道题后的绿色数字可单独查看答案，点击上方按钮批量切换。</p>
+    <!-- ===== 第五部分：家长辅导建议 ===== -->
+    <div class="section" style="background: #f4f9ff; border-radius: 24px; padding: 20px 25px;">
+        <div class="section-title" style="border-bottom-color: #b8d2e8;">👪 给家长的辅导建议</div>
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>口诀横着背</strong>：如“三六十八”代表3个6，不要只竖着背，让孩子理解交换律（3×7和7×3一回事）。</li>
+            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>允许画图</strong>：前一个月允许孩子在草稿纸上画小棒或方阵图，量感建立后自然心算。</li>
+            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>口述过程</strong>：做两步题时，让孩子说出“先算什么、再算什么”，说得清才是真懂。</li>
+            <li style="background: white; border-radius: 14px; padding: 12px 20px; border: 1px solid #dce9f5;">📌 <strong>验算习惯</strong>：除法用乘法反着验算（如54×4=216），正确率直线上升。</li>
+        </ul>
     </div>
 
     <div class="footer">
-        📚 苏教版三年级数学上册 · 综合复习 · 适用于 GitHub Pages 展示
+        📚 苏教版三年级数学上册 · 完全复习包 · 适合 GitHub Pages 发布
     </div>
 </div>
 
 <script>
     (function() {
-        // ----- 测验数据 (共55题) -----
         const quizData = [
-            // 原50题
             "小明有236张邮票，又收集了158张，现在一共有多少张？",
             "学校图书馆有故事书423本，借出去287本，还剩多少本？",
             "每袋糖果重250克，4袋共重多少克？",
@@ -493,7 +527,6 @@
             "一台电视机原价980元，降价150元，现价多少元？",
             "小明每分钟走60米，走了5分钟，一共走了多少米？",
             "学校有篮球24个，足球的个数是篮球的3倍，足球有多少个？篮球和足球一共有多少个？",
-            // ----- 新增5道四则混合应用题 (编号51~55) -----
             "小强买了4种花，红花有48朵，黄花是红花的3倍，红花是蓝花的4倍，紫花比红花少15朵，总共有多少朵花？",
             "学校有篮球24个，足球的个数是篮球的2倍，篮球的个数是排球的3倍，羽毛球比篮球少8个，四种球共有多少个？",
             "小明有零花钱80元，买文具用去零花钱的一半，买零食比文具多花12元，买书比零食少花5元，一共花了多少钱？",
@@ -502,68 +535,47 @@
         ];
 
         const answerData = [
-            // 原50题答案
-            "394张", "136本", "1000克", "14个", "77页",
-            "224厘米", "56元", "9人", "170千克", "32元",
-            "36元", "20个", "45颗", "42人", "96瓶",
-            "12袋", "45张", "165元", "30米", "12人",
-            "310件", "155本", "90支", "6个", "77张",
-            "60棵", "9束", "12元", "40厘米", "8盒，剩8个",
-            "48页", "18人", "72瓶", "8个", "90千克",
-            "45元", "7组，剩3人", "共37元，剩3元", "24厘米", "180本",
-            "200千克", "9个", "84张", "40米", "130元",
-            "8盘", "24朵", "830元", "300米", "足球72个，共96个",
-            // 新增5题答案
+            "394张", "136本", "1000克", "14个", "77页", "224厘米", "56元", "9人", "170千克", "32元",
+            "36元", "20个", "45颗", "42人", "96瓶", "12袋", "45张", "165元", "30米", "12人",
+            "310件", "155本", "90支", "6个", "77张", "60棵", "9束", "12元", "40厘米", "8盒，剩8个",
+            "48页", "18人", "72瓶", "8个", "90千克", "45元", "7组，剩3人", "共37元，剩3元", "24厘米", "180本",
+            "200千克", "9个", "84张", "40米", "130元", "8盘", "24朵", "830元", "300米", "足球72个，共96个",
             "237朵", "96个", "139元", "305棵", "346个"
         ];
 
-        // ----- 渲染测验 -----
         const container = document.getElementById('quizContainer');
         let html = '';
         for (let i = 0; i < quizData.length; i++) {
-            const num = i + 1;
-            const question = quizData[i];
-            const answer = answerData[i];
             html += `
                 <div class="quiz-item">
-                    <span class="num">${num}.</span>
-                    <span>${question}</span>
-                    <span class="ans hidden" data-index="${i}">${answer}</span>
+                    <span class="num">${i+1}.</span>
+                    <span>${quizData[i]}</span>
+                    <span class="ans hidden" data-index="${i}">${answerData[i]}</span>
                 </div>
             `;
         }
         container.innerHTML = html;
 
-        // ----- 交互：点击单个答案切换隐藏/显示 -----
-        const ansElements = document.querySelectorAll('.quiz-item .ans');
-        ansElements.forEach(el => {
+        // 单个切换
+        document.querySelectorAll('.quiz-item .ans').forEach(el => {
             el.addEventListener('click', function(e) {
                 e.stopPropagation();
                 this.classList.toggle('hidden');
             });
         });
 
-        // ----- 批量切换按钮 (重新绑定) -----
-        const toggleBtn = document.getElementById('toggleAllBtn');
-        const newBtn = toggleBtn.cloneNode(true);
-        toggleBtn.parentNode.replaceChild(newBtn, toggleBtn);
+        // 批量切换
+        const btn = document.getElementById('toggleAllBtn');
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
         const finalBtn = document.getElementById('toggleAllBtn');
 
         finalBtn.addEventListener('click', function() {
-            const allAns = document.querySelectorAll('.quiz-item .ans');
-            const first = allAns[0];
-            const isHidden = first.classList.contains('hidden');
-            allAns.forEach(el => {
-                if (isHidden) {
-                    el.classList.remove('hidden');
-                } else {
-                    el.classList.add('hidden');
-                }
-            });
+            const all = document.querySelectorAll('.quiz-item .ans');
+            const isHidden = all[0].classList.contains('hidden');
+            all.forEach(el => el.classList.toggle('hidden'));
             this.textContent = isHidden ? '🔘 隐藏 答案' : '🔘 显示 答案';
         });
-
-        // 初始文字（初始全部隐藏）
         finalBtn.textContent = '🔘 显示 答案';
     })();
 </script>
